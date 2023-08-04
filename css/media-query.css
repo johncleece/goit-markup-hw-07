@@ -1,0 +1,99 @@
+/* Responsive Layout */
+
+@media screen and (max-width: 428px) {
+
+    .header,
+    .footer {
+        display: none;
+    }
+
+    .container {
+        width: 428px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .section {
+        padding: 96px 16px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding-top: 112px;
+        padding-bottom: 112px;
+    }
+
+    .hero-title {
+        font-size: 36px;
+        margin-bottom: 72px;
+    }
+
+    /* Benefits Section */
+    .benefits {
+        display: block;
+    }
+
+    .benefits_item:not(:last-child) {
+        margin-bottom: 72px;
+    }
+
+    .benefits-icon-container {
+        display: none;
+    }
+
+    .benefits-title {
+        font-size: 36px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .benefits-description {
+        text-align: left;
+        font-weight: 500;
+    }
+
+    /* Services Section */
+    .services-section {
+        display: none;
+    }
+
+    /* Our Team Section */
+    .our-team_list {
+        display: flex;
+        justify-content: center;
+    }
+
+    .our-team-list_item:not(:last-child) {
+        margin-bottom: 72px;
+    }
+
+    /* Customer Section */
+    .customer-client-list {
+        justify-content: center;
+    }
+
+    .customer-client-item:not(:nth-last-child(-n+2)) {
+        margin-bottom: 72px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 429px) and (max-width: 768px) {}
+
+@media screen and (max-width: 1158px) {}

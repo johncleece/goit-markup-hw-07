@@ -996,16 +996,3 @@ a {
     margin-top: 16px;
     display: flex;
 }
-
-/* Responsive Layout */
-
-@media screen and (max-width: 428px) {
-
-    /*Hero Section */
-
-
-}
-
-@media (min-width: 429px) and (max-width: 768px) {}
-
-@media screen and (max-width: 1158px) {}
