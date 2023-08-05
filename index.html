@@ -23,7 +23,7 @@
   <body>
     <!-- heading -->
     <header class="header">
-      <div class="container header-container">
+      <div class="container header-container hamburger-menu-container">
         <nav class="heading-navigation">
           <a href="./index.html" target="_self" title="Logo" class="heading-studio_word"
             ><span class="heading-web_word">WEB</span>STUDIO</a
@@ -48,6 +48,37 @@
             <a href="tel:+110001111111" class="contact-links_link">+11 (000) 111-11-11</a>
           </li>
         </ul>
+
+        <!-- Mobile Menu -->
+        <div class="menu-container js-menu-container" id="mobile-menu">
+          <button class="menu-toggle js-close-menu">
+            <svg class="icon hamburger">
+              <use href="./images/icons.svg#hamburger"></use>
+            </svg>
+          </button>
+          <ul class="hamburger-navigation-menu list-item">
+            <li class="hamburger-navigation-menu_item">
+              <a href="./index.html" class="hamburger-navigation-menu_link link-active">Studio</a>
+            </li>
+            <li class="hamburger-navigation-menu_item">
+              <a href="./portfolio.html" class="hamburger-navigation-menu_link">Portfolio</a>
+            </li>
+            <li class="hamburger-navigation-menu_item">
+              <a href="./contacts.html" class="hamburger-navigation-menu_link">Contacts</a>
+            </li>
+          </ul>
+
+          <ul class="hamburger-contact-links list-item">
+            <li class="hamburger-contact-links_item">
+              <a href="mailto:info@devstudio.com" class="hamburger-email-link"
+                >info@devstudio.com</a
+              >
+            </li>
+            <li class="hamburger-contact-links_item">
+              <a href="tel:+110001111111" class="hamburger-contact-link">+11 (000) 111-11-11</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -474,5 +505,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

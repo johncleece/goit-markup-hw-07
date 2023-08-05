@@ -226,6 +226,11 @@
 <path d="M4 1h24c1.657 0 3 1.343 3 3v24c0 1.657-1.343 3-3 3h-24c-1.657 0-3-1.343-3-3v-24c0-1.657 1.343-3 3-3z"></path>
 </symbol>
 
+<!-- Hamburger Menu -->
+<symbol id="hamburger" viewBox="0 0 47 32">
+<path d="M1.961 29.154h42.965M1.961 15.615h42.965M1.961 2.077h42.965"></path>
+</symbol>
+
 </defs>
 </svg>
 
