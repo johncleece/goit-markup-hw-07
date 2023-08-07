@@ -30,10 +30,10 @@
           >
           <ul class="navigation-menu list-item">
             <li class="navigation-menu_item">
-              <a href="./index.html" class="navigation-menu_link">Studio</a>
+              <a href="./index.html" class="navigation-menu_link link-active">Studio</a>
             </li>
             <li class="navigation-menu_item">
-              <a href="./portfolio.html" class="navigation-menu_link link-active">Portfolio</a>
+              <a href="./portfolio.html" class="navigation-menu_link">Portfolio</a>
             </li>
             <li class="navigation-menu_item">
               <a href="./contacts.html" class="navigation-menu_link">Contacts</a>
@@ -48,6 +48,37 @@
             <a href="tel:+110001111111" class="contact-links_link">+11 (000) 111-11-11</a>
           </li>
         </ul>
+
+        <!-- Mobile Menu -->
+        <div class="hamburger-container">
+          <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg class="hamburger-menu-icon" width="32" height="22">
+              <use href="./images/icons.svg#hamburger"></use>
+            </svg>
+          </button>
+
+          <ul class="hamburger-menu list-item">
+            <li><a href="./index.html" class="link">Studio</a></li>
+            <li><a href="./portfolio.html" class="link">Portfolio</a></li>
+            <li><a href="./contacts.html" class="link">Contacts</a></li>
+            <ul class="list-item">
+              <li>
+                <a href="tel:+110001111111" class="hamburger-contact-links_link"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li>
+                <a href="mailto:info@devstudio.com" class="hamburger-contact-links_link"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -55,7 +86,7 @@
     <main>
       <!-- Tab Menu -->
       <section class="section tab-menu-section">
-        <div class="container">
+        <div class="container tab-menu-container">
           <h2 hidden>Tab Navigation</h2>
           <ul class="filter-list list-item">
             <li class="filter-list_item">
@@ -317,6 +348,73 @@
         </div>
       </section>
     </footer>
-    <script src="./modal.js"></script>
+
+    <!-- Mobile Menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="close-icon" width="11" height="11">
+          <use href="./images/icons.svg#close-button"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu list-item">
+        <li class="mobile-menu-item">
+          <a href="./index.html" class="hamburger-menu-link link-active">Studio</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a href="./portfolio.html" class="hamburger-menu-link">Portfolio</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a href="./contacts.html" class="hamburger-menu-link">Contacts</a>
+        </li>
+
+        <ul class="mobile-contact-link list-item">
+          <li class="mobile-contact-item">
+            <a href="tel:+110001111111" class="hamburger-contact-link">+11 (000) 111-11-11</a>
+          </li>
+          <li class="mobile-contact-item">
+            <a href="mailto:info@devstudio.com" class="hamburger-contact-link email-link"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+
+        <ul class="mobile-menu-social-list list-item">
+          <li class="mobile-social-item">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+              ><svg class="icon footer-social-profile" width="40" height="40">
+                <use href="./images/icons.svg#footer-instagram-icon"></use></svg
+            ></a>
+          </li>
+          <li class="mobile-social-item">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
+              ><svg class="icon footer-social-profile" width="40" height="40">
+                <use href="./images/icons.svg#footer-twitter-icon"></use></svg
+            ></a>
+          </li>
+          <li class="mobile-social-item">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+              ><svg class="icon footer-social-profile" width="40" height="40">
+                <use href="./images/icons.svg#footer-facebook-icon"></use></svg
+            ></a>
+          </li>
+          <li class="mobile-social-item">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+              ><svg class="icon footer-social-profile" width="40" height="40">
+                <use href="./images/icons.svg#footer-linkedin-icon"></use></svg
+            ></a>
+          </li>
+        </ul>
+      </ul>
+    </div>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/modal.js"></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

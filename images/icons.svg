@@ -228,7 +228,7 @@
 
 <!-- Hamburger Menu -->
 <symbol id="hamburger" viewBox="0 0 47 32">
-<path d="M1.961 29.154h42.965M1.961 15.615h42.965M1.961 2.077h42.965"></path>
+<path d="M1.34814 20.0431H30.8866M1.34814 10.7354H30.8866M1.34814 1.42773H30.8866" stroke="#2E2F42" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 </symbol>
 
 </defs>

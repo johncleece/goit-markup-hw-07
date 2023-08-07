@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/media-query.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,7 +22,7 @@
   <body>
     <!-- heading -->
     <header class="header">
-      <div class="container header-container hamburger-menu-container">
+      <div class="container header-container">
         <nav class="heading-navigation">
           <a href="./index.html" target="_self" title="Logo" class="heading-studio_word"
             ><span class="heading-web_word">WEB</span>STUDIO</a
@@ -56,26 +55,27 @@
             aria-expanded="false"
             aria-controls="mobile-menu"
           >
-            <svg
-              width="24"
-              height="24"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clip-rule="evenodd"
-              ></path>
+            <svg class="hamburger-menu-icon" width="32" height="22">
+              <use href="./images/icons.svg#hamburger"></use>
             </svg>
           </button>
 
-          <ul class="hamburger-menu">
-            <li><a href="" class="link">About</a></li>
-            <li><a href="" class="link">Products</a></li>
-            <li><a href="" class="link">Contacts</a></li>
-            <li><a href="" class="link">Career</a></li>
+          <ul class="hamburger-menu list-item">
+            <li><a href="./index.html" class="link">Studio</a></li>
+            <li><a href="./portfolio.html" class="link">Portfolio</a></li>
+            <li><a href="./contacts.html" class="link">Contacts</a></li>
+            <ul class="list-item">
+              <li>
+                <a href="tel:+110001111111" class="hamburger-contact-links_link"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li>
+                <a href="mailto:info@devstudio.com" class="hamburger-contact-links_link"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
           </ul>
         </div>
       </div>
@@ -506,26 +506,59 @@
     <!-- Mobile Menu -->
     <div class="menu-container js-menu-container" id="mobile-menu">
       <button class="menu-toggle js-close-menu">
-        <svg
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-            clip-rule="evenodd"
-          ></path>
+        <svg class="close-icon" width="11" height="11">
+          <use href="./images/icons.svg#close-button"></use>
         </svg>
       </button>
 
-      <ul class="mobile-menu">
-        <li><a href="" class="link">sample</a></li>
-        <li><a href="" class="link">Products</a></li>
-        <li><a href="" class="link">Contacts</a></li>
-        <li><a href="" class="link">Career</a></li>
+      <ul class="mobile-menu list-item">
+        <li class="mobile-menu-item">
+          <a href="./index.html" class="hamburger-menu-link link-active">Studio</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a href="./portfolio.html" class="hamburger-menu-link">Portfolio</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a href="./contacts.html" class="hamburger-menu-link">Contacts</a>
+        </li>
+
+        <ul class="mobile-contact-link list-item">
+          <li class="mobile-contact-item">
+            <a href="tel:+110001111111" class="hamburger-contact-link">+11 (000) 111-11-11</a>
+          </li>
+          <li class="mobile-contact-item">
+            <a href="mailto:info@devstudio.com" class="hamburger-contact-link email-link"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+
+        <ul class="mobile-menu-social-list list-item">
+          <li class="mobile-social-item">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+              ><svg class="icon footer-social-profile" width="40" height="40">
+                <use href="./images/icons.svg#footer-instagram-icon"></use></svg
+            ></a>
+          </li>
+          <li class="mobile-social-item">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
+              ><svg class="icon footer-social-profile" width="40" height="40">
+                <use href="./images/icons.svg#footer-twitter-icon"></use></svg
+            ></a>
+          </li>
+          <li class="mobile-social-item">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+              ><svg class="icon footer-social-profile" width="40" height="40">
+                <use href="./images/icons.svg#footer-facebook-icon"></use></svg
+            ></a>
+          </li>
+          <li class="mobile-social-item">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+              ><svg class="icon footer-social-profile" width="40" height="40">
+                <use href="./images/icons.svg#footer-linkedin-icon"></use></svg
+            ></a>
+          </li>
+        </ul>
       </ul>
     </div>
 
