@@ -91,6 +91,7 @@ a {
     position: sticky;
     top: 0;
     background-color: var(--white-color);
+    z-index: 999;
 
 }
 
@@ -803,7 +804,6 @@ a {
 }
 
 
-
 .modal-button {
     display: flex;
     justify-content: center;
@@ -1004,8 +1004,7 @@ a {
 /* Responsive */
 
 .menu-toggle {
-    min-height: 40px;
-    min-width: 40px;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1033,6 +1032,7 @@ a {
     padding: 40px;
     background-color: var(--white-color);
     z-index: 999;
+
     transform: translateX(100%);
     transition-property: transform;
     transition-duration: 250ms;
@@ -1063,37 +1063,10 @@ a {
 }
 
 @media (max-width: 768px) {
-
-
     .hamburger-menu {
         display: none;
     }
-
-    .header-container {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .contact-links {
-        display: block;
-    }
-
-    .contact-links_item:not(:first-child) {
-        margin-left: 0;
-    }
-
-    .contact-links_link {
-        padding: 0;
-    }
-
-    .navigation-menu_link::after {
-        top: 57px;
-    }
-
-
 }
-
-
 
 @media (min-width: 768px) {
     .hamburger-container {
@@ -1103,16 +1076,9 @@ a {
     .menu-toggle {
         display: none;
     }
-
 }
 
-@media (max-width:767px) {
 
-    .navigation-menu,
-    .contact-links {
-        display: none;
-    }
-}
 
 
 /* Hamburger Menu*/
@@ -1123,6 +1089,7 @@ a {
     font-weight: 700;
     letter-spacing: 0.72px;
     text-transform: capitalize;
+    line-height: 1.5;
     color: var(--navy-blue-color);
 
     transition-property: color;
@@ -1144,6 +1111,7 @@ a {
     font-style: normal;
     font-weight: 700;
     letter-spacing: 0.72px;
+    line-height: 1.5;
     color: var(--iris-color);
 
     transition-property: color;
@@ -1182,8 +1150,17 @@ a {
 
 .mobile-menu-social-list {
     display: flex;
-    justify-content: space-between;
     margin-top: 48px;
+    flex-wrap: wrap;
+}
+
+.mobile-social-item a {
+    margin-bottom: 40px;
+}
+
+
+.mobile-social-item:not(:last-child) {
+    margin-right: 56px;
 }
 
 .mobile-social-item a {
@@ -1215,8 +1192,9 @@ a {
     }
 }
 
+
 /* Tablet  */
-@media (min-width: 429px) and (max-width: 768px) {
+@media (max-width: 1158px) {
     .header {
         padding: 24px 16px;
     }
@@ -1225,12 +1203,26 @@ a {
         padding: 96px 16px;
         display: flex;
         flex-wrap: wrap;
+        width: 100%;
     }
 
     .container {
         width: 100%;
         margin: 0 auto;
+        padding: 0 16px;
+    }
+
+    .contact-links {
+        display: block;
+        align-items: center;
+    }
+
+    .contact-links_link {
         padding: 0;
+    }
+
+    .contact-links_item:not(:first-child) {
+        margin-left: 0px;
     }
 
     /* Hero Section */
@@ -1245,9 +1237,12 @@ a {
     }
 
     /* Benefits Section */
-    .benefits_item {
-        width: 356px;
+    .benefits-container {
+        width: 768px;
+    }
 
+    .benefits_item {
+        width: 342px;
     }
 
     .benefits_item_tablet-view:not(:nth-last-child(-n+2)) {
@@ -1287,7 +1282,15 @@ a {
         margin-bottom: 64px;
     }
 
+    .our-team-containter {
+        width: 768px;
+    }
+
     /* Customer Section */
+    .customer-containter {
+        width: 768px;
+    }
+
     .customer-client-list {
         justify-content: center;
     }
@@ -1323,14 +1326,16 @@ a {
         padding: 96px 108px;
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     .footer-container {
         display: flex;
+        justify-self: flex-start;
         flex-wrap: wrap;
         margin: 0 auto;
         padding: 0;
-        width: 100%;
+        width: 768px;
     }
 
     .column1-container {
@@ -1356,12 +1361,12 @@ a {
     }
 
     .footer-social-text {
-        text-align: center;
+        text-align: left;
     }
 
     .footer-social-icon {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
 
     }
 
@@ -1375,14 +1380,23 @@ a {
 
 }
 
-/* Mobile */
-@media screen and (max-width: 428px) {
+
+@media (max-width:767px) {
+
+    .navigation-menu,
+    .contact-links {
+        display: none;
+    }
+
+    .footer-container {
+        display: block;
+    }
+
     .header {
         padding: 24px 16px;
     }
 
     .container {
-        width: 428px;
         margin: 0 auto;
         padding: 0;
     }
@@ -1391,6 +1405,15 @@ a {
         padding: 96px 16px;
         display: flex;
         flex-wrap: wrap;
+    }
+
+    .hamburger-menu-icon {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        position: absolute;
+        top: 3px;
+
     }
 
     /* Hero Section */
@@ -1407,6 +1430,7 @@ a {
     /* Benefits Section */
     .benefits {
         display: block;
+        margin: auto;
     }
 
     .benefits_item:not(:last-child) {
@@ -1415,6 +1439,12 @@ a {
 
     .benefits-icon-container {
         display: none;
+    }
+
+    .benefits_item {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 0;
     }
 
     .benefits-title {
@@ -1439,16 +1469,17 @@ a {
         justify-content: center;
     }
 
-    .our-team-list_item:not(:last-child) {
+    .our-team-list_item:not(:nth-last-child(-n+2)) {
         margin-bottom: 72px;
     }
+
 
     /* Customer Section */
     .customer-client-list {
         justify-content: center;
     }
 
-    .customer-client-item:not(:nth-last-child(-n+2)) {
+    .customer-client-item:not(:nth-last-child(-n+3)) {
         margin-bottom: 72px;
     }
 
@@ -1481,7 +1512,6 @@ a {
         display: block;
         margin: 0 auto;
         padding: 0;
-        width: 428px;
     }
 
     .column1-container {
@@ -1495,6 +1525,11 @@ a {
     }
 
     .footer-text {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-text::after {
         display: flex;
         justify-content: center;
     }
@@ -1519,20 +1554,56 @@ a {
     }
 
     .form-field {
-        margin-bottom: 16px;
+        display: block;
+        width: 70%;
+        margin: 0 auto 16px
     }
 
     .footer-subscribe-text {
         text-align: center;
     }
 
+    .column1-container {
+        width: 100%;
+    }
+
+    .column2-container {
+        width: 100%;
+    }
+
     .column3-container {
         margin: 0 auto;
+        width: 100%;
+    }
+
+}
+
+@media (max-width:583px) {
+    .our-team-list_item:not(:last-child) {
+        margin-bottom: 72px;
     }
 }
 
+@media screen and (max-width: 428px) {
+    .form-field {
+        width: 100%;
+    }
 
+    .our-team-list_item:not(:last-child) {
+        margin-bottom: 72px;
+    }
 
+    .mobile-contact-link {
+        margin-top: 240px;
+    }
+
+}
+
+@media screen and (max-width: 391px) {
+    .customer-client-item:not(:last-child) {
+        margin-bottom: 72px;
+    }
+}
 
 @media screen and (max-width: 320px) {
     body {
