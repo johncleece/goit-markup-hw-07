@@ -1607,6 +1607,6 @@ a {
 
 @media screen and (max-width: 320px) {
     body {
-        overflow: hidden;
+        overflow-x: hidden;
     }
 }
