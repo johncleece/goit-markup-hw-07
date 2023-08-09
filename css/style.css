@@ -590,6 +590,7 @@ a {
 /* Modal Popup Styling */
 .backdrop {
     position: fixed;
+    z-index: 999999999;
     top: 0;
     left: 0;
     opacity: 1;
@@ -601,10 +602,11 @@ a {
 
 .modal {
     position: absolute;
+
     top: 50%;
     left: 50%;
     width: 408px;
-    height: 608px;
+    height: auto;
     border-radius: 4px;
     padding: 72px 24px 24px;
     background: var(--dairy-color);
@@ -732,8 +734,13 @@ a {
 
 .modal-checkbox-container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 8px;
+    justify-content: flex-start;
+    position: relative;
+    top: 0;
+    left: 0;
+
 }
 
 .form-column-1 {
@@ -763,9 +770,10 @@ a {
     border: 1px solid rgba(46, 47, 66, 0.40);
     cursor: pointer;
     position: absolute;
-    bottom: 0;
+    top: 0;
+    left: 0;
     fill: transparent;
-    align-items: center;
+    align-items: flex-start;
     border-radius: 2px;
 }
 
@@ -1195,19 +1203,23 @@ a {
 
 /* Tablet  */
 @media (max-width: 1158px) {
+    .navigation-menu_link::after {
+        top: 57px;
+    }
+
     .header {
-        padding: 24px 16px;
+        padding: 24px 0;
     }
 
     .section {
-        padding: 96px 16px;
+        padding: 96px 0;
         display: flex;
         flex-wrap: wrap;
         width: 100%;
     }
 
     .container {
-        width: 100%;
+        width: 768px;
         margin: 0 auto;
         padding: 0 16px;
     }
@@ -1237,9 +1249,6 @@ a {
     }
 
     /* Benefits Section */
-    .benefits-container {
-        width: 768px;
-    }
 
     .benefits_item {
         width: 342px;
@@ -1282,14 +1291,7 @@ a {
         margin-bottom: 64px;
     }
 
-    .our-team-containter {
-        width: 768px;
-    }
-
     /* Customer Section */
-    .customer-containter {
-        width: 768px;
-    }
 
     .customer-client-list {
         justify-content: center;
@@ -1301,7 +1303,7 @@ a {
 
     /* Portfolio Section */
     .tab-menu-section {
-        padding: 64px 16px 96px;
+        padding: 64px 0 96px;
     }
 
     .filter-list {
@@ -1323,7 +1325,7 @@ a {
 
     /* Footer Section */
     .footer {
-        padding: 96px 108px;
+        padding: 96px 0;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -1335,7 +1337,7 @@ a {
         flex-wrap: wrap;
         margin: 0 auto;
         padding: 0;
-        width: 768px;
+
     }
 
     .column1-container {
@@ -1392,17 +1394,12 @@ a {
         display: block;
     }
 
-    .header {
-        padding: 24px 16px;
-    }
-
     .container {
-        margin: 0 auto;
-        padding: 0;
+        width: 100%;
     }
 
     .section {
-        padding: 96px 16px;
+        padding: 96px 0;
         display: flex;
         flex-wrap: wrap;
     }
@@ -1486,24 +1483,29 @@ a {
 
     /* Porfolio Page */
     .tab-menu-section {
-        padding: 48px 16px;
+        padding: 48px 0;
     }
 
     .filter-list {
         display: flex;
+        align-items: baseline;
         flex-wrap: wrap;
         justify-content: flex-start;
         margin-bottom: 48px;
     }
 
-    .filter-list_item:not(:nth-last-child(-n+2)) {
+    .filter-list_item:not(:last-child) {
         margin-bottom: 16px;
+    }
+
+    .project {
+        justify-content: center;
     }
 
 
     /* Footer */
     .footer {
-        padding: 96px 16px;
+        padding: 96px 0;
         display: flex;
         flex-wrap: wrap;
     }
@@ -1511,7 +1513,6 @@ a {
     .footer-container {
         display: block;
         margin: 0 auto;
-        padding: 0;
     }
 
     .column1-container {
@@ -1576,12 +1577,50 @@ a {
         width: 100%;
     }
 
+    /* Menu */
+    .menu-container {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .mobile-contact-item {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+
+
+
 }
 
 @media (max-width:583px) {
     .our-team-list_item:not(:last-child) {
         margin-bottom: 72px;
     }
+
+    .mobile-contact-link {
+        margin-top: 100px;
+    }
+
+    .hamburger-menu-link {
+        font-size: 20px;
+    }
+
+    .hamburger-contact-link {
+        font-size: 25px;
+    }
+
+    .mobile-menu-item:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .mobile-contact-item:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+
+
 }
 
 @media screen and (max-width: 428px) {
@@ -1593,9 +1632,21 @@ a {
         margin-bottom: 72px;
     }
 
-    .mobile-contact-link {
-        margin-top: 240px;
+    /* Modal */
+    .backdrop {
+        padding: 0 16px;
     }
+
+    .modal {
+        width: 100%;
+    }
+
+    .checkbox-mark {
+        display: none;
+    }
+
+
+
 
 }
 
