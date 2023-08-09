@@ -1041,14 +1041,14 @@ a {
     background-color: var(--white-color);
     z-index: 999;
 
-    transform: translateX(100%);
+    transform: translateY(100%);
     transition-property: transform;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-container.is-open {
-    transform: translateX(0);
+    transform: translateY(0);
 }
 
 .menu-container .menu-toggle {
@@ -1630,6 +1630,11 @@ a {
 
     .our-team-list_item:not(:last-child) {
         margin-bottom: 72px;
+    }
+
+
+    .menu-container {
+        padding: 16px;
     }
 
     /* Modal */
