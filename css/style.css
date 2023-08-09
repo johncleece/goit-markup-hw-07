@@ -602,7 +602,6 @@ a {
 
 .modal {
     position: absolute;
-
     top: 50%;
     left: 50%;
     width: 408px;
@@ -1657,6 +1656,8 @@ a {
 
 
 
+
+
 }
 
 @media screen and (max-width: 391px) {
@@ -1670,5 +1671,9 @@ a {
     body {
         overflow-x: hidden;
         overflow-y: scroll;
+    }
+
+    .our-team_social-list {
+        flex-wrap: nowrap;
     }
 }
