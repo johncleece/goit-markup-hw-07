@@ -1650,6 +1650,10 @@ a {
         display: none;
     }
 
+    .mobile-social-item:not(:last-child) {
+        margin-right: 25px;
+    }
+
 
 
 
