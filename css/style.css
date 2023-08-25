@@ -1425,7 +1425,6 @@ a {
     .form-field {
         margin-bottom: 0;
     }
-
 }
 
 
@@ -1456,7 +1455,6 @@ a {
         align-items: flex-end;
         position: absolute;
         top: 3px;
-
     }
 
     /* Hero Section */
@@ -1677,7 +1675,6 @@ a {
         margin-bottom: 72px;
     }
 
-
     .menu-container {
         padding: 16px;
     }
@@ -1698,12 +1695,6 @@ a {
     .mobile-social-item:not(:last-child) {
         margin-right: 25px;
     }
-
-
-
-
-
-
 }
 
 @media screen and (max-width: 391px) {
