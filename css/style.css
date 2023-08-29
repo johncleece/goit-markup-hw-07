@@ -1651,12 +1651,6 @@ a {
     }
 }
 
-@media screen and (max-width: 391px) {
-    .customer-client-item:not(:last-child) {
-        margin-bottom: 72px;
-    }
-}
-
 /* Hide Scroll */
 @media screen and (max-width: 320px) {
     body {
